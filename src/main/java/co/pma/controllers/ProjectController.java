@@ -25,8 +25,8 @@ public class ProjectController {
     }
 
     @PostMapping("/save")
-    public String createProject(Project project, Model model) {
-        //projectRepository.save(project);
+    public String createProject(Project project) {
+        projectRepository.save(project);
 
         return "redirect:/projects/new";
 
